@@ -4,24 +4,140 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Market-Home</title>
+    <link rel="icon" type="image/png" href="src/icons/market_main.png"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background: #f9f9f9;
+        }
+
+        .form-container {
+            width: 320px;
+            margin: 40px auto;
+            padding: 20px;
+            border-radius: 10px;
+            background: #fff;
+            box-shadow: 0px 4px 10px rgba(0,0,0,0.1);
+            text-align: center;
+        }
+
+        .form-container img {
+            width: 80px;
+            margin-bottom: 10px;
+        }
+
+        h2 {
+            margin-bottom: 20px;
+        }
+
+        table {
+            width: 100%;
+            border: none;
+        }
+
+        td {
+            border: none;
+            padding: 6px;
+            text-align: left;
+        }
+
+        input {
+            width: 100%;
+            padding: 8px;
+            border-radius: 6px;
+            border: 1px solid #ccc;
+            font-size: 14px;
+        }
+
+        input:focus {
+            border-color: #4CAF50;
+            outline: none;
+        }
+
+        .icons-row {
+            display: flex;
+            justify-content: center;
+            gap: 15px;
+            margin: 15px 0;
+            font-size: 24px;
+            color: #555;
+        }
+
+        .icons-row i {
+            cursor: pointer;
+            transition: 0.3s;
+        }
+
+        .icons-row i:hover {
+            color: #4CAF50;
+        }
+
+        .btn-register {
+            background-color: #4CAF50;
+            color: white;
+            padding: 8px 15px;
+            border: none;
+            border-radius: 6px;
+            cursor: pointer;
+            font-size: 16px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 6px;
+            margin: auto;
+        }
+
+        .btn-register:hover {
+            background-color: #45a049;
+        }
+    </style>
 </head>
 <body>
-    <center><b>Register</b></center><br>
-    <table border="0" align="center">
-        <tr><td><label>First Name:</label></td></tr>
-        <tr><td><input type="text" placeholder="Juan"><br></td></tr>
-        <tr><td><label>Last Name:</label></td></tr>
-        <tr><td><input type="text" placeholder="Molano"><br></td></tr>
-        <tr><td><label>Mobile Number:</label></td></tr>
-        <tr><td><input type="text" placeholder="09123456789"><br></td></tr>
-        <tr><td><label>Identification Number:</label></td></tr>
-        <tr><td><input type="text" placeholder="123456789"><br></td></tr>
-        <tr><td><label>Email:</label></td></tr>
-        <tr><td><input type="email" placeholder="example@mail.com"><br></td></tr>
-        <tr><td><label>Password:</label></td></tr>
-        <tr><td><input type="password" placeholder="********"><br></td></tr>
-        <tr><td><center><button>Register</button></center></td></tr>
-    </table>
-    </form>
+    <div class="form-container">
+        <h2>Register</h2>
+
+        <form action="#" method="post">
+            <table>
+                <tr><td><label>First Name:</label></td></tr>
+                <tr><td><input type="text" placeholder="Juan"></td></tr>
+                
+                <tr><td><label>Last Name:</label></td></tr>
+                <tr><td><input type="text" placeholder="Molano"></td></tr>
+                
+                <tr><td><label>Mobile Number:</label></td></tr>
+                <tr><td><input type="text" placeholder="09123456789"></td></tr>
+                
+                <tr><td><label>Identification Number:</label></td></tr>
+                <tr><td><input type="text" placeholder="123456789"></td></tr>
+                
+                <tr><td><label>Email:</label></td></tr>
+                <tr><td><input type="email" placeholder="example@mail.com"></td></tr>
+                
+                <tr><td><label>Password:</label></td></tr>
+                <tr><td><input type="password" placeholder="********"></td></tr>
+
+                <!-- Íconos decorativos -->
+                <tr>
+                    <td>
+                        <div class="icons-row">
+                            <i class="fa-brands fa-facebook"></i>
+                            <i class="fa-brands fa-google"></i>
+                            <i class="fa-brands fa-twitter"></i>
+                        </div>
+                    </td>
+                </tr>
+
+                <!-- Botón Register -->
+                <tr>
+                    <td>
+                        <button class="btn-register">
+                            <i class="fa-solid fa-user-plus"></i> Register
+                        </button>
+                    </td>
+                </tr>
+            </table>
+        </form>
+    </div>
 </body>
 </html>
