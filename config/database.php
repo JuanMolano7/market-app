@@ -14,8 +14,8 @@
         port=$port
         ";
 
-    $connection = pg_connect($data_connection);
-    if(!$connection){
+    $conn = pg_connect($data_connection);
+    if(!$conn){
         echo "Error:". pg_last_error();
     } else {
         echo "Connection Successfully";
