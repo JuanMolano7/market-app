@@ -9,6 +9,8 @@
         $id_number = $_POST['id_number'];
         $e_mail = $_POST['email'];
         $p_wd = $_POST['passwd'];
+
+        $enc_pase =password_hash($p_wd, PASSWORD_DEFAULT);
     
     //Step 3:create query to insert into
     $query="
@@ -25,7 +27,7 @@
             '$m_number', 
             '$id_number', 
             '$e_mail', 
-            '$p_wd'
+            '$enc_pase'
          )
     ";
  
