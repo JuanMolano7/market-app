@@ -6,12 +6,12 @@
         $f_name = $_POST['fname'];
         $l_name = $_POST['lname'];
         $m_number = $_POST['mnumber'];
-        $id_number = $_POST['id_number'];
+        $id_number = $_POST['ide_number'];
         $e_mail = $_POST['email'];
-        $p_wd = $_POST['passswd'];
+        $p_wd = $_POST['passwd'];
 
-        $enc_pase =password_hash($p_wd, PASSWORD_DEFAULT);
-        
+        $enc_pass = password_hash($p_wd, PASSWORD_DEFAULT);
+
         $check_email = "
         SELECT 
             u.email
@@ -33,15 +33,15 @@
             lastname, 
             mobile_number, 
             ide_number, 
-            email
+            email,
             password) 
     VALUES (
             '$f_name', 
             '$l_name', 
             '$m_number', 
             '$id_number', 
-            '$e_mail' 
-            '$enc_pase'
+            '$e_mail',
+            '$p_wd'
          )
     ";
  
@@ -55,6 +55,6 @@
         header('refresh:0; url=signin.html');
     } else {
         echo "Something went wrong";
-    } 
-        }
+    }
+}  
 ?>
