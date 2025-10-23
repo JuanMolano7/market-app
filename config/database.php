@@ -1,23 +1,44 @@
 <?php
-     //Database Connection
-     $host     = "localhost";  //127.0.0.1
-     $user     = "postgres";
-     $password = "unicesmag";
-     $dbname   = "marketapp";
-     $port     = "5432";
+    //Database Connection to Supabase
+    
+    $supa_host = "aws-1-us-east-1.pooler.supabase.com";
+    $supa_user = "postgres.gogayluwdcsyszhhfljj";
+    $supa_dbname = "postgres";
+    $supa_password = "Juanito90";
+    $supa_port = "6543";
+    
+    //Database connection to local server
 
-     $data_connection = "
-        host=$host
-        user=$user
-        password=$password
-        dbname=$dbname
-        port=$port
-        ";
+    $local_host       =   "localhost";
+    $local_user       =   "postgres";
+    $local_password   =   "unicesmag";
+    $local_dbname     =   "marketapp";
+    $local_port       =   "5432";
 
-    $conn = pg_connect($data_connection);
-    if(!$conn){
-        echo "Error:". pg_last_error();
+    $supa_data_connection = "
+        host=$supa_host
+        user=$supa_user
+        password=$supa_password
+        dbname=$supa_dbname
+        port=$supa_port
+    ";
+
+    $local_data_connection = "
+        host=$local_host
+        user=$local_user
+        password=$local_password
+        dbname=$local_dbname
+        port=$local_port
+    ";
+
+    //$conn_supa= pg_connect($supa_data_connection);
+    $conn_local= pg_connect($local_data_connection);
+
+    if(!$conn_supa){
+        echo "Error", pg_last_error();
     } else {
-        echo "Connection Successfully";
+        echo"Connection Successfully :::";
     }
+
+
 ?>

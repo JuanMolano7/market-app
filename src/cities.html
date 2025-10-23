@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Register City</title>
+    <link rel="icon" type="image/png" href="src/icons/market_main.png">
+</head>
+<body>
+    <center><b>Register City</b></center><br>
+
+    <form name="city_form" action="add_city.php" method="post">
+      <table border="1" align="center">
+        <tr><td><label>City name:</label></td></tr>
+        <tr><td><input type="text" name="name" required><br></td></tr>
+
+        <tr><td><label>Abbreviation:</label></td></tr>
+        <tr><td><input type="text" name="abbr" placeholder="e.g. PAS" required><br></td></tr>
+
+        <tr><td><label>Code:</label></td></tr>
+        <tr><td><input type="text" name="code" placeholder="e.g. 123" required><br></td></tr>
+
+        <tr><td><label>Region ID:</label></td></tr>
+        <tr><td><input type="number" name="region_id" placeholder="Enter Region ID" required><br></td></tr>
+
+        <tr><td><center><button type="submit">Save City</button></center></td></tr>
+      </table>
+    </form>
+</body>
+</html>

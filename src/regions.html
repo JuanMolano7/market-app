@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Register Region</title>
+    <link rel="icon" type="image/png" href="src/icons/market_main.png">
+</head>
+<body>
+    <center><b>Register Region</b></center><br>
+
+    <form name="region_form" action="add_region.php" method="post">
+      <table border="1" align="center">
+        <tr><td><label>Region name:</label></td></tr>
+        <tr><td><input type="text" name="name" required><br></td></tr>
+
+        <tr><td><label>Abbreviation:</label></td></tr>
+        <tr><td><input type="text" name="abbr" placeholder="e.g. NAR" required><br></td></tr>
+
+        <tr><td><label>Code:</label></td></tr>
+        <tr><td><input type="text" name="code" placeholder="e.g. 52001" required><br></td></tr>
+
+        <tr><td><label>Country ID:</label></td></tr>
+        <tr><td><input type="number" name="country_id" placeholder="Enter Country ID" required><br></td></tr>
+
+        <tr><td><center><button type="submit">Save Region</button></center></td></tr>
+      </table>
+    </form>
+</body>
+</html>
