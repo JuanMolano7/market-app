@@ -11,5 +11,8 @@
     <title>Marketapp - Home</title>
 </head>
 <body>
+    <center><b>User:</b>Here print your name </center>
+    <a href ="list_users.php">List all users</a>
+    <a href ="logout.php">Logout</a>
 </body>
 </html>

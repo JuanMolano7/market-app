@@ -1,6 +1,14 @@
 <?php
    //Step 1 get database access
    require('../config/database.php');
+
+   session_start();
+
+   if(isser($_SESSION['session_user_id'])){
+    header('refresh:0;url=main.php')
+   }
+
+
    //Step 2 get form-data
    $e_mail = trim($_POST['email']);
    $p_wd = trim($_POST['passwd']);
