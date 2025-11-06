@@ -12,6 +12,7 @@
 </head>
 <body>
     <center><b>User:</b>Here print your name </center>
+    <?php echo $SESSION ?>
     <a href ="list_users.php">List all users</a>
     <a href ="logout.php">Logout</a>
 </body>

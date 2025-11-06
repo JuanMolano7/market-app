@@ -31,10 +31,10 @@
         port=$local_port
     ";
 
-    $conn_supa= pg_connect($supa_data_connection);
+    //$conn_supa= pg_connect($supa_data_connection);
     $conn_local= pg_connect($local_data_connection);
 
-    if(!$conn_supa){
+    if(!$conn_local){
         echo "Error", pg_last_error();
     } else {
         echo"Connection Successfully :::";
