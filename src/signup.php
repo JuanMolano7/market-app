@@ -9,6 +9,7 @@
    $id_number = trim($_POST['ide_number']);
    $e_mail = trim($_POST['email']);
    $p_wd = trim($_POST['passwd']);
+   $url_photo = "photo_user.png";
 
    //$enc_pass = password_hash($p_wd, PASSWORD_DEFAULT);
    $enc_pass = md5($p_wd);
@@ -29,8 +30,8 @@
       exit();
    } else {
    //Step 3 create query to insert into
-   $query = "INSERT INTO users(firstname,lastname,mobile_number,ide_number,email,password)
-   VALUES('$f_name','$l_name','$m_number','$id_number','$e_mail','$enc_pass')";
+   $query = "INSERT INTO users(firstname,lastname,mobile_number,ide_number,email,passwd,url_photo)
+   VALUES('$f_name','$l_name','$m_number','$id_number','$e_mail','$enc_pass','$url_photo')";
 
    //Step 4  execute query
    $res = pg_query($conn_local, $query);
